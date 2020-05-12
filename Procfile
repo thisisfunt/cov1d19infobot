@@ -1,0 +1,1 @@
+worker: python cov1d19infobot.py
