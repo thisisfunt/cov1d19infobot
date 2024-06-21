@@ -1,11 +1,12 @@
 import telebot
 import requests
 from bs4 import BeautifulSoup
+import config
 
 url = "https://xn--80aesfpebagmfblc0a.xn--p1ai/"
 user = {"UserAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"}
 
-bot = telebot.TeleBot("1252908404:AAF0z9g97wHQKnBqDjMyuFmbWq8-1UfiEwk")
+bot = telebot.TeleBot(config.SECRETKEY)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
